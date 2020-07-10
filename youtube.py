@@ -6,6 +6,8 @@ from selenium import webdriver
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--incognito")
 
+
+#Enter your path name where your chromedriver is being installed 
 driver = webdriver.Chrome(r"C:\Users\DELL\PycharmProjects\SeleniumTesting\Browsers\chromedriver.exe", chrome_options=chrome_options)
 driver.maximize_window()
 
@@ -13,7 +15,7 @@ driver.get("https://www.youtube.com/")
 time.sleep(2)
 
 #search box
-driver.find_element_by_xpath("/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div/div[1]/input").send_keys("automation")
+driver.find_element_by_xpath("/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div/div[1]/input").send_keys("automation")#change the search key accordingly
 time.sleep(5)
 
 #seach button
